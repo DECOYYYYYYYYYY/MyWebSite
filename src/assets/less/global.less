@@ -1,0 +1,61 @@
+@import "variable";
+.clearfix {
+  *zoom:1;
+  &::before,&::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.ttf?t=1632100575037') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont",Microsoft YaHei,serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hover-float {
+  transition: transform .4s,box-shadow .4s;
+}
+.hover-float:hover {
+  transform: translateY(-2%);
+  box-shadow: 1px 4px 10px 1px #ccc;
+}
+.w {
+  width: @page-width;
+  margin: 0 auto;
+}
+.failed,.loading {
+  margin: 50px 0;
+  line-height: 50px;
+  font-size: 50px;
+  text-align: center;
+  color: @tint-font-color;
+}
+@keyframes loading_animation {
+  0% {
+    opacity: 0.4;
+  }100%{
+  opacity: 1;
+     }
+}
+.loading {
+  animation: loading_animation 1s ease infinite alternate;
+}
+.nav-text {
+  & a:hover {
+    color: @blue-font-color-hover;
+  }
+}
+.active-text {
+  color: @blue-font-color-selected;
+  &:hover{
+    color: @blue-font-color-selected!important;
+  }
+}
