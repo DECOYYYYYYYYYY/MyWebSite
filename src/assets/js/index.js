@@ -17,3 +17,26 @@ export function formatDate(time, detailMode=false) {
     return y + "-" + MM + "-" + d + " " + h + ":" + m;
   }
 }
+export function throttle(fn, delay){
+  let valid = true
+  return function (){
+    console.log(valid)
+    if (!valid) {
+      return false
+    }
+    valid = false
+    fn()
+    setTimeout(() => {
+      valid = true;
+    }, delay)
+  }
+}
+export function debounce(fn, delay){
+  let timer = null
+  return function (){
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(fn, delay)
+  }
+}

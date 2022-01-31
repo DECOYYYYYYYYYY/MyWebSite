@@ -19,6 +19,7 @@
 </template>
 
 <script>
+// todo 向下滚动时隐藏，向上滚动时显示
 import {mapState} from 'vuex'
 
 export default {

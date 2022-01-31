@@ -62,7 +62,6 @@ export default {
 }
 
 .slot-box {
-  width: 870px;
 
   img {
     width: 100%;
